@@ -4,6 +4,7 @@ import instance from '../services/axios';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import "../App.css"
 
 const UserCard = 
 
@@ -26,7 +27,8 @@ memo(
   if (!user) return <div>Loading...</div>;
 
   return (
-    <Card style={{ margin: '10px' }}>
+    <div className='App'>
+    <Card style={{ margin: '10px',width:"300px" }}>
       <CardContent>
         <Typography variant="h6">{user.name}</Typography>
         <Typography>{user.email}</Typography>
@@ -35,6 +37,7 @@ memo(
         <Typography>{user.address.street}, {user.address.city}</Typography>
       </CardContent>
     </Card>
+    </div>
   );
 }
  );
